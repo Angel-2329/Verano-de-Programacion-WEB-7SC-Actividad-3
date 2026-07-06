@@ -1,18 +1,15 @@
 # Instituto Tecnológico de Oaxaca
 **Materia:** Verano de Programación Web  
-**Docente:** M.C. Martinez Nieto Adelina  
-**Alumno:** Angel de Jesus Mendez Garcia  
+**Docente:** Martinez Nieto Adelina  
+**Alumno:** Mendez Garcia Angel de Jesus  
 
 ---
 
 ## Librería de Componentes Visuales Interactivos
 
 ### ¿Qué problema resuelve?
-¿Alguna vez han llenado un formulario larguísimo y, al darle 'enviar', la página les marca un error genérico y pierden todo su progreso? O peor aún, ¿los mensajes de alerta tienen colores tan agresivos que lastiman la vista?
 
-Esta librería ofrece una solución elegante y amigable para validar datos en tiempo real. Cuenta con tooltips inteligentes que guían al usuario exactamente donde está el error, y una barra dinámica que mide la fuerza de la contraseña mientras se escribe. 
-
-Está construida con código puro y ligero. Cero dependencias pesadas. Además, su interfaz fue estructurada con un enfoque meticuloso y personalizado. En lugar de usar efectos artificiales o colores saturados, utilizamos degradados suaves y sombras sutiles que le dan un aspecto profesional y, lo más importante, cuidan la vista del usuario.
+Esta componente ofrece una solución elegante y amigable para validar datos en tiempo real. Cuenta con tooltips inteligentes que guían al usuario exactamente donde está el error, y una barra dinámica que mide la fuerza de la contraseña mientras se escribe. 
 
 ---
 
@@ -38,7 +35,7 @@ Para incluir estos componentes en tu proyecto HTML, solo necesitas enlazar los a
 
 ## El Código de los Componentes
 
-Nuestra librería se divide en dos grandes herramientas que viven juntas dentro del archivo principal llamado `componente.js`. 
+El componente se divide en dos grandes herramientas que viven juntas dentro del archivo principal llamado `componente.js`. 
 
 Para mantenerlo simple, a continuación te muestro la parte más importante de cada herramienta: el **constructor**. Esta es la sección donde tú (o cualquier persona que instale la librería) tienes el control total para modificar los colores, las distancias y las reglas sin necesidad de tocar las matemáticas internas del código.
 
@@ -49,14 +46,17 @@ Esta primera parte funciona como un asistente silencioso. Su trabajo es vigilar 
 Al usar este componente, lo único que necesitas modificar son sus **opciones** de configuración para que se adapte perfectamente al estilo visual de tu proyecto:
 
 ```javascript
-export class componente_tipError {
+export class componente_tipError
+{
     // El constructor es la puerta de entrada: aquí defines cómo se comportará el globo.
-    constructor(id_input, opciones = {}) {
+    constructor(id_input, opciones = {})
+    {
         this.input = document.querySelector(id_input);
 
         // ¡Aquí es donde ocurre la magia de la personalización!
         // Si no mandas una opción, el componente usará estos valores por defecto.
-        this.opciones = {
+        this.opciones =
+        {
             mensaje: opciones.mensaje || 'Este campo es obligatorio', // El texto de ayuda que leerá el usuario.
             posicion: opciones.posicion || 'bottom',                  // ¿Dónde quieres que aparezca? (top, bottom, left, right).
             regla: opciones.regla || null,                            // Fórmulas personalizadas (ej. para validar correos o solo letras).
@@ -68,20 +68,12 @@ export class componente_tipError {
             alOcultar: opciones.alOcultar || (() => {})               // ¿O cuando desaparezca?
         };
 
-        this.componente = null;
-
-        if (this.input) {
-            this.init();
-        } else {
-            console.warn(`No se encontro el input: ${id_input}`);
-        }
-    } 
-
     // ... 
     // (El resto del archivo contiene los métodos internos que calculan la posición en pantalla, 
     // validan el texto y animan el componente de forma 100% automática).
     // ...
 }
+```
 
 ---
 
