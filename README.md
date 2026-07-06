@@ -80,22 +80,28 @@ export class componente_tipError
 ## Capturas de Pantalla
 
 Formulario limpio sin errores al empezar la interacción:
-![Formulario inicial](index-sinerrores.png)
+
+<img src="img/index-sinerrores.png" alt="Formulario inicial" width="60%">
 
 Validación de campos funcionando en tiempo real de manera simultánea en diferentes posiciones (izquierda, derecha y abajo):
-![Validación de errores](index-errores.png)
+
+<img src="img/index-errores.png" alt="Validación de errores" width="60%">
 
 Medidor de fuerza analizando una contraseña básica (Regular):
-![Contraseña Regular](index-contraseñamala.png)
+
+<img src="img/index-contraseñamala.png" alt="Contraseña Regular" width="60%">
 
 Medidor de fuerza detectando una contraseña compleja, mostrando además la función de hacer visible el texto:
-![Contraseña Segura](index-contraseñasegura.png)
+
+<img src="img/index-contraseñasegura.png" alt="Contraseña Segura" width="60%">
 
 ---
 
 ## Video Promocional y Demo
 
 A continuación se presenta un demo narrado mostrando la problemática de los formularios tradicionales y cómo nuestra librería lo soluciona, garantizando una excelente experiencia de usuario.
+
+[![Demo de los Componentes Visuales](https://img.youtube.com/vi/WnbolW5VE74/0.jpg)](https://youtu.be/WnbolW5VE74)
 
 ---
 
