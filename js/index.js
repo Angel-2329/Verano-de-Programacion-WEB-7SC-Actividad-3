@@ -2,7 +2,7 @@ import { componente_tipError, componente_Contraseña} from './componente.js';
 
 const errorCorreo = new componente_tipError('#correo', {
     mensaje: 'Formato de correo no válido',
-    posicion: 'right',                     
+    posicion: 'bottom',                     
     tema: 'tema-degradado-azul',           
     distancia: 4,
     regla: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,  
@@ -19,7 +19,7 @@ const errorPassword = new componente_tipError('#contraseña', {
 
 const errorNombre = new componente_tipError('#nombre', {
     mensaje: 'El nombre solo debe contener letras',
-    posicion: 'left',
+    posicion: 'lebottomft',
     tema: 'tema-degradado-rojo',
     distancia: 12,
     regla: /^[A-Za-záéíóúÁÉÍÓÚñÑ\s]+$/,
