@@ -1,0 +1,137 @@
+@import url('componente.css');
+
+body 
+{
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.contenedor-formulario 
+{
+    background: #ffffff;
+    padding: 35px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+    width: 100%;
+    max-width: 380px;
+}
+
+.cabecera-registro 
+{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.cabecera-registro h2 
+{
+    margin: 0 0 8px 0;
+    color: #2c3e50;
+    font-size: 24px;
+}
+
+.cabecera-registro p 
+{
+    margin: 0;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.grupo-input 
+{
+    margin-bottom: 22px;
+}
+
+.grupo-input label 
+{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.grupo-input input 
+{
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #dcdfe3;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.grupo-input input:focus 
+{
+    border-color: #54769c;
+    outline: none;
+}
+
+.btn-registrar 
+{
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    background: linear-gradient(135deg, #7493b6 0%, #54769c 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.btn-registrar:hover 
+{
+    opacity: 0.9;
+}
+
+.enlace-login 
+{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #6c757d;
+}
+
+.enlace-login a 
+{
+    color: #54769c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.enlace-login a:hover 
+{
+    text-decoration: underline;
+}
+
+.mostrar-contraseña-contenedor 
+{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.mostrar-contraseña-contenedor input[type="checkbox"] 
+{
+    width: auto;
+    margin: 0 8px 0 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.label-checkbox 
+{
+    margin: 0;
+    font-size: 13px;
+    color: #6c757d;
+    font-weight: normal;
+    cursor: pointer;
+}
