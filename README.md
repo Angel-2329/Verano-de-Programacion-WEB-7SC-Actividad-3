@@ -75,6 +75,39 @@ export class componente_tipError
 }
 ```
 
+### 2. El Medidor de Fuerza de Contraseña
+
+Esta segundo componente por cada letra mayúscula, número o símbolo especial que agregas a tu contraseña, el código te otorga puntos de seguridad. Dependiendo de tu puntuación, dibuja una barra debajo de tu texto que va creciendo y cambiando de color automáticamente para avisarte si tu clave es débil, regular o muy segura.
+
+Al usar este componente, tu poder de control está en definir qué tan estricta quieres que sea la evaluación y qué palabras exactas quieres que el usuario lea en la pantalla:
+
+```javascript
+export class componente_Contraseña {
+    // El constructor recibe el ID de tu caja de texto y tus configuraciones personalizadas.
+    constructor(id_input, opciones = {}) {
+        this.input = document.querySelector(id_input);
+
+        // CONFIGURACIÓN CENTRAL: 
+        // Modifica estos valores para cambiar las reglas de evaluación y los textos informativos.
+        this.opciones = {
+            minimo: opciones.minimo || 8,                  // El número mínimo de letras requerido para otorgar el primer punto de longitud.
+            mostrarTexto: opciones.mostrarTexto !== false, // Activa o desactiva por completo el mensaje de texto que acompaña a la barra.
+            textos: opciones.textos || [                  // La lista de palabras que se mostrarán en pantalla según los puntos ganados.
+                'Muy débil', 
+                'Débil', 
+                'Regular', 
+                'Segura', 
+                'Muy segura'
+            ]
+        };
+    }
+
+    // ... 
+    // (El resto del archivo contiene los métodos internos que crean la estructura de la barra,
+    // analizan el texto mediante reglas lógicas y cambian las clases de color de forma automática).
+    // ...
+}
+```
 ---
 
 ## Capturas de Pantalla
